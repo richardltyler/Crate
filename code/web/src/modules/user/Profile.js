@@ -25,7 +25,8 @@ const Profile = (props) => (
     </Helmet>
 
     {/* Top title bar */}
-    {/*  */}
+    {/* In this project, styling components are being imported 
+    (lines 9-12 above) to define reusable styles without separate CSS files. Each Grid is essentially a container, populated by the GridCells. This first block is defining our header component. The second defines the body of content specific to our user (their name and email details), and also wraps the buttons (which are conditionally styled based on the assigned theme, respectively). */}
     <Grid style={{ backgroundColor: grey }}>
       <GridCell style={{ padding: '2em', textAlign: 'center' }}>
         <H3 font="secondary">My profile</H3>
