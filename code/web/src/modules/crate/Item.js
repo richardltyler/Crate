@@ -77,7 +77,14 @@ class Item extends PureComponent {
           <p style={{ textAlign: 'center', marginTop: '1.5em', marginBottom: '1em' }}>
             <Button
               theme="primary"
+              /* this.onClickSubscribe function needs to be reassigned to the submit button at the end of our survey component. When a user
+              completes the survey and clicks submit, they should then be directed to the subscriptions page showing their crate(s)
+              If a user already HAS at least one subscription and they click on the subscribe button for another crate, they should not be prompted
+              to take the survey again, or it should be optional*/
               onClick={this.onClickSubscribe.bind(this, id)}
+              /* a new method needs to be assigned to this onClick event listener, such as beginSurvey() or loadSurvey() for example.
+              This will route the user to the beginning of the survey where they MAY be prompted with a question about what clothes/accessories
+              they would like to see in the survey, for example feminine, masculine, or both.*/
               type="button"
               disabled={ isLoading }
             >
