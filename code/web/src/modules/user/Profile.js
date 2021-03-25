@@ -19,11 +19,13 @@ import { logout } from './api/actions'
 const Profile = (props) => (
   <div>
     {/* SEO */}
+    {/* The React HELMET component is used to manage changes to the document HEAD, and allows nested updates to override elements in the parent component - in this case, when a user is viewing the page for their profile, the title wrapped by the Helmet component will overwrite the title for the site homepage and allow the browser tab to reflect that the user is viewing that specific page (here, the personal profile). */}
     <Helmet>
       <title>My Profile - Crate</title>
     </Helmet>
 
     {/* Top title bar */}
+    {/*  */}
     <Grid style={{ backgroundColor: grey }}>
       <GridCell style={{ padding: '2em', textAlign: 'center' }}>
         <H3 font="secondary">My profile</H3>
