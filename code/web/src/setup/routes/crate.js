@@ -1,6 +1,7 @@
 // App Imports
 import List from '../../modules/crate/List'
 
+
 // Crate routes
 export default {
   list: {
@@ -9,3 +10,5 @@ export default {
     auth: true
   }
 }
+
+
