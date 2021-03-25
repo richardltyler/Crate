@@ -28,3 +28,6 @@ export default {
     auth: true
   }
 }
+
+// Annotations
+// // See web/src/setup/routes/index for notes on the routes

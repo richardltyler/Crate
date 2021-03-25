@@ -11,4 +11,6 @@ export default {
   }
 }
 
+// Annotations
+// // See web/src/setup/routes/index for notes on the routes
 

@@ -14,6 +14,7 @@ const App = () => (
   <Layout>
     <Switch>
       {/* {the routes that were declared in the routes directary are being mapped through and created here } */}
+      
       {Object.values(routes).map((route, index) => (
         route.auth
           ? <RoutePrivate {...route} key={index} path={typeof route.path === 'function' ? route.path() : route.path}/>
