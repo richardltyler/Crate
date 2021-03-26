@@ -16,7 +16,7 @@ export const subscriptionsByUser = {
   type: new GraphQLList(SubscriptionType),
   resolve: getByUser
 }
-
+//Search for subscriptions by styles?
 // Subscription By id
 export const subscription = {
   type: SubscriptionType,

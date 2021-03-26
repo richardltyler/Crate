@@ -6,6 +6,7 @@ import { UserType } from '../user/types'
 import CrateType from '../crate/types'
 
 // Subscription type
+//Creating the subscription object/ model for GraphQL query
 const SubscriptionType = new GraphQLObjectType({
   name: 'subscription',
   description: 'Subscription Type',
@@ -14,6 +15,7 @@ const SubscriptionType = new GraphQLObjectType({
     id: { type: GraphQLInt },
     user: { type: UserType },
     crate: { type: CrateType },
+    //Add a style here.
     createdAt: { type: GraphQLString },
     updatedAt: { type: GraphQLString }
   })

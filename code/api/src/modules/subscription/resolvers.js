@@ -1,6 +1,6 @@
 // App Imports
 import models from '../../setup/models'
-
+//These are creating queries.
 // Get subscription by ID
 export async function get(parentValue, { id }) {
   return await models.Subscription.findOne({
@@ -47,6 +47,7 @@ export async function create(parentValue, { crateId }, { auth }) {
       userId: auth.user.id
     })
   } else {
+    //Allows for a specified error.
     throw new Error('Please login to subscribe to this crate.')
   }
 }

@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER
     }
   })
-
+  //One option will be to add a style to the subscription (or vice versa) The next lines create relationships.
   Subscription.associate = function(models) {
     Subscription.belongsTo(models.User)
     Subscription.belongsTo(models.Crate)
