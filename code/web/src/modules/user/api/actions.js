@@ -117,3 +117,7 @@ export function getGenders() {
     }))
   }
 }
+
+// Annotations
+// // Here we should be adding a function that sends the user's style preference to the backend 
+

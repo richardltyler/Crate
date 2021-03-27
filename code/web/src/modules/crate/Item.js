@@ -59,12 +59,21 @@ class Item extends PureComponent {
       })
   }
 
+  // getGender = () => { 
+  //   if (this.props.crate.name.includes('Women')) {
+  //     return 'fem';
+  //   } else {
+  //     return 'masc';
+  //   }
+  // }
+
   render() {
     const { id, name, description } = this.props.crate
     const { isLoading } = this.state
 
     return (
       <Card style={{ width: '18em', backgroundColor: white }}>
+        {/* <Card style={{ width: '18em', backgroundColor: white }} gender={whatever this gender would be from the Crate object in props}> */}
         <p style={{ padding: '2em 3em 0 3em' }}>
           <img src={`${ APP_URL }/images/crate.png`} alt={name} style={{ width: '100%' }}/>
         </p>
@@ -78,6 +87,11 @@ class Item extends PureComponent {
             <Button
               theme="primary"
               onClick={this.onClickSubscribe.bind(this, id)}
+              // Annotations
+              // // This button will need to redirect to the survey page
+              // // We can conditionally render the subscription so that the user will need to have the correct results in order to subscribe. If they don't have those results, it redirects to the survey and gets the results and **then** subscribes
+              // // We will need to somehow designate a gender on each of these cards and conditionally check that the user has that gender's survey results to decide wether they will take the survey or not 
+              // // You can check from the Crate object in props to find the gender form the either the name or description
               type="button"
               disabled={ isLoading }
             >
