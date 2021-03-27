@@ -121,6 +121,8 @@ export function get(slug, isLoading = true) {
 }
 
 // Create subscription
+// // This function is being sent to user/crate/item and added to a button to make the subscription on the designated card
+// // we will prolly need to import this to our survey results page in order to subscribe the user whenever they have results 
 export function create(variables) {
   return dispatch => {
     return axios.post(routeApi, mutation({
