@@ -15,6 +15,7 @@ import { white, grey2, black } from '../../ui/common/colors'
 import { APP_URL } from '../../setup/config/env'
 import userRoutes from '../../setup/routes/user'
 import { messageShow, messageHide } from '../common/api/actions'
+// this create method is the call to the backend to handle the subscription 
 import { create } from '../subscription/api/actions'
 
 // Component
