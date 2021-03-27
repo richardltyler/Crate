@@ -55,6 +55,8 @@ export function getList(isLoading = true) {
 
 
 // Get list of subscriptions by user
+
+// // Getting the list of crates the user has already subscribed to.
 export function getListByUser(isLoading = true) {
   return dispatch => {
     dispatch({

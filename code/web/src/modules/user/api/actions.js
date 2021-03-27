@@ -67,6 +67,8 @@ export function login(userCredentials, isLoading = true) {
 }
 
 // Set user token and info in localStorage and cookie
+
+// // With the authentication using web tokens via the BE, we may want to look deeper into whether we need to be working with localStorage
 export function loginSetUserLocalStorageAndCookie(token, user) {
   // Update token
   window.localStorage.setItem('token', token)
@@ -109,6 +111,8 @@ export function logoutUnsetUserLocalStorageAndCookie() {
 }
 
 // Get user gender
+
+// // Appears in the Admin dir, but not sure yet how this function is being utilized. We will be referring to the selected crate to determine whether to offer the user more masculine or feminine options, and not necessarily setting a gender property for our users.
 export function getGenders() {
   return dispatch => {
     return axios.post(routeApi, query({
@@ -117,3 +121,5 @@ export function getGenders() {
     }))
   }
 }
+
+// // expect that we would want a similar function to those above where we will set the result of the survey to store for our user (which key depends on gender indicated by the selected crate)

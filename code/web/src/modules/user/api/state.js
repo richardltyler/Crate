@@ -11,6 +11,7 @@ export const userInitialState = {
 }
 
 // State
+// Our reducer - this function will check the user's login credentials and set the user in state when they are authenticated, or reset details to 'null' on a logout action.
 export default (state = userInitialState, action) => {
   switch (action.type) {
     case SET_USER:

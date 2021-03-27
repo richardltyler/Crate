@@ -56,6 +56,7 @@ Profile.propTypes = {
 }
 
 // Component State
+// Setting initial state for our user
 function profileState(state) {
   return {
     user: state.user

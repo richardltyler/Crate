@@ -35,6 +35,9 @@ class Item extends PureComponent {
 
     this.props.messageShow('Subscribing, please wait...')
 
+    // // IF a user's style preferences are not defined, we'll want to direct them to take the survey to provide that data.
+    // // IF a user's style IS already defined, continue forward to confirm the and add the subscription.
+    // // Will need to import this function to our Survey Comp and pass in the crateID.
     this.props.create({ crateId })
       .then(response => {
         if (response.data.errors && response.data.errors.length > 0) {
@@ -82,6 +85,9 @@ class Item extends PureComponent {
               disabled={ isLoading }
             >
               <Icon size={1.2} style={{ color: white }}>add</Icon> Subscribe
+
+              {/* We'll want this button to direct to the survey if the user has not yet taken it to provide their style preferences.
+              We'll want to check the value of the survey results as a property of our user to see whether it is already defined by filling out the survey. */}
             </Button>
           </p>
         </div>
