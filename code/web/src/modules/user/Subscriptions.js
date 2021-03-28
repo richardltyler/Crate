@@ -19,13 +19,13 @@ import SubscriptionItem from '../subscription/Item'
 class Subscriptions extends PureComponent {
 
   // Runs on server only for SSR
-  // Sending the list of our user's subscriptions to the reducer
+  // // Sending the list of our user's subscriptions to the reducer
   static fetchData({ store }) {
     return store.dispatch(getListByUser())
   }
 
   // Runs on client only
-  // Making the request to get the list of subscriptions for our specified user
+  // // Making the request to get the list of subscriptions for our specified user
   componentDidMount() {
     this.props.getListByUser()
   }
