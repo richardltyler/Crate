@@ -25,3 +25,7 @@ storiesOf('Input', module)
       <option value="5">Five</option>
     </Select>
   ))
+
+  /* COULD use Select for survey, in which case its already been drafted here function needs to load up survey instead, conditional on whether user already has styling preferences --
+  will we have preferences available through state.user or will we have to make a request to find out?? If survey is taken,
+  we need to transfer logic for subscribing to survey submission*/

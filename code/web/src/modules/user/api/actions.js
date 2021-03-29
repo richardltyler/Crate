@@ -14,6 +14,8 @@ export const LOGOUT = 'AUTH/LOGOUT'
 
 // Actions
 
+/* Do we want to add style preferences POST to this file??*/
+
 // Set a user after login or using localStorage token
 export function setUser(token, user) {
   if (token) {
@@ -38,6 +40,7 @@ export function login(userCredentials, isLoading = true) {
       variables: userCredentials,
       fields: ['user {name, email, role}', 'token']
     }))
+    /* Do we need to add fields here for the user object? E.g. style preference?*/
       .then(response => {
         let error = ''
 
@@ -109,6 +112,7 @@ export function logoutUnsetUserLocalStorageAndCookie() {
 }
 
 // Get user gender
+/* How is the user gender currently set? Could we use this value to determine survey type, or vice versa?*/
 export function getGenders() {
   return dispatch => {
     return axios.post(routeApi, query({

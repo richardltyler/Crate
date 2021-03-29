@@ -16,6 +16,8 @@ import { APP_URL } from '../../setup/config/env'
 import { messageShow, messageHide } from '../common/api/actions'
 import { remove, getListByUser } from '../subscription/api/actions'
 
+/* If we allow users to attach different style preferences to different subscriptions, would add that option here, taking default preference from state.user preference(s)*/
+
 // Component
 class Item extends PureComponent {
 

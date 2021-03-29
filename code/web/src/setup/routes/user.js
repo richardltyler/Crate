@@ -28,3 +28,4 @@ export default {
     auth: true
   }
 }
+/* Add survey route to user routes or crate routes??*/

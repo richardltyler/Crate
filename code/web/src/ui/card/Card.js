@@ -8,6 +8,8 @@ import { level1 } from '../common/shadows'
 const Card = (props) => {
   const { children, ...other } = props
 
+  /* could reuse this component for survey inputs?*/
+
   return (
     <div {...other}>
       {children}

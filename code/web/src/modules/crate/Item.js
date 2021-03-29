@@ -33,6 +33,10 @@ class Item extends PureComponent {
       isLoading: true
     })
 
+    /* this.onClickSubscribe function needs to load up survey instead, conditional on whether user already has styling preferences --
+    will we have preferences available through state.user or will we have to make a request to find out?? If survey is taken,
+    we need to transfer logic for subscribing to survey submission*/
+
     this.props.messageShow('Subscribing, please wait...')
 
     this.props.create({ crateId })
@@ -43,6 +47,7 @@ class Item extends PureComponent {
           this.props.messageShow('Subscribed successfully.')
 
           this.props.history.push(userRoutes.subscriptions.path)
+          /* adds crate to user's subscriptions*/
         }
       })
       .catch(error => {

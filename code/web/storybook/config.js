@@ -12,4 +12,8 @@ function loadStories() {
     require('./stories/grid.js')
 }
 
+//Annotations
+//if using storybook to preview our addition, will add require statement for our new stories file
+//run storybook with `npm run storybook` **this is currently throwing error, possibly related to webpack or babel configuration
+
 configure(loadStories, module)

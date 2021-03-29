@@ -15,6 +15,8 @@ import { grey, grey2 } from '../../ui/common/colors'
 import userRoutes from '../../setup/routes/user'
 import { logout } from './api/actions'
 
+/*Potentially want to display style preferences on this page/opportunity to change preference*/
+
 // Component
 const Profile = (props) => (
   <div>
