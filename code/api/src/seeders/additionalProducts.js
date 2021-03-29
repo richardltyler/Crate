@@ -1,34 +1,41 @@
 'use strict';
-const Sequelize = require('sequelize')
-
-
-const factory = require('factory-bot').factory;
+const { date } = require('faker');
 const faker = require('faker');
-const Product = require('../modules/product/model.js');
-const productName = JSON.stringify({name: faker.commerce.productName()});
 
+function generateProducts(){
+  let products = []
 
-console.log(productName);
+  for (let id=1000; id <= 1100; id++){
+    let name = faker.commerce.productName();
+    let slug = name.replace(/ /g, "-");
+    let description = faker.commerce.productDescription();
+    let type = Math.random() < 0.5 ? 1 : 2;
+    let gender = Math.random() < 0.5 ? 1 : 2;
+    let image = faker.image.imageUrl();
+    let style = ['classic', 'edgy', 'sproty', 'preppy', 'trendy', 'adventurous'][Math.floor(Math.random() * 6)]
 
-factory.define('product', Product, {
-  name: 'Generic Wooden Pants',
-  slug: faker.lorem.slug(productName),
-  description: faker.commerce.productDescription(),
-  type: Math.random([1,2]),
-  gender: Math.random([1,2]),
-  image: faker.image.imageUrl(),
-  style: Math.random(['classic', 'edgy', 'sproty', 'preppy', 'trendy', 'adventurous'])
-});
+    products.push({
+      "id": id, 
+      "name": name,
+      "slug": slug,
+      "description": description,
+      "type": type,
+      "gender": gender,
+      "image": image, 
+      "style": style,
+      "createdAt": new Date(),
+      "updatedAt": new Date()
+    });
+  }
+  return products
+}
 
-// console.log(product)
+let productData = generateProducts();
+
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('products', 
-      factory.createMany('product', 5).then(productsArray => {
-        console.log(productsArray)
-      })
-    )
+    return queryInterface.bulkInsert('products', productData, {})
   },
 
   down: (queryInterface, Sequelize) => {
