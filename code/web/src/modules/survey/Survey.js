@@ -13,7 +13,15 @@ import { grey, grey2 } from '../../ui/common/colors'
 class Survey extends Component {
   constructor() {
     super(); 
-    this.state; 
+    this.state = {
+      selections: {
+        tops: [],
+        bottoms: [],
+        accessories: [],
+        shoes: [],
+      },
+      currentCategoryIndex: 0
+    }; 
   }
   render() {
     return (
