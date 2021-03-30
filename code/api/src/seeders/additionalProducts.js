@@ -12,7 +12,7 @@ function generateProducts(){
     let type = Math.random() < 0.5 ? 1 : 2;
     let gender = Math.random() < 0.5 ? 1 : 2;
     let image = faker.image.imageUrl();
-    let style = ['classic', 'edgy', 'sproty', 'preppy', 'trendy', 'adventurous'][Math.floor(Math.random() * 6)]
+    let style = ['classic', 'edgy', 'sporty', 'preppy', 'trendy'][Math.floor(Math.random() * 5)]
 
     products.push({
       "id": id, 
