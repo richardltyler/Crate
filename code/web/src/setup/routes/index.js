@@ -9,6 +9,7 @@ import survey from './survey'
 
 // Combined routes
 export const routes = Object.assign(admin, home, user, product, crate, survey)
+console.log('ROUTES >>>', routes)
 
 // API Routes
 export const routeApi = APP_URL_API

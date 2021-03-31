@@ -10,6 +10,9 @@ import { Grid, GridCell } from '../../ui/grid'
 import { H3 } from '../../ui/typography'
 import { grey, grey2 } from '../../ui/common/colors'
 
+// App Imports
+import Form from './Form'
+
 class Survey extends Component {
   constructor() {
     super(); 
@@ -39,6 +42,8 @@ class Survey extends Component {
             <p style={{ marginTop: '1em', color: grey2 }}>Let's learn a little bit about your style!</p>
           </GridCell>
         </Grid>
+
+        <Form data={{categoryTitle: 'tops'}}/>
       </div>
     )
   }
