@@ -9,11 +9,6 @@ import NotFound from '../../modules/common/NotFound'
 import RoutePrivate from '../../modules/auth/RoutePrivate'
 
 const App = () => {
-
-//   Object.values(routes).forEach((route) => {
-//     console.log('ROUTE >>>', route)
-// })
-
   return (
   <Layout>
     <Switch>
