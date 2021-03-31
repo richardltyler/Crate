@@ -3,7 +3,7 @@ import Survey from '../../modules/survey/Survey'
 
 // Crate routes
 export default {
-  list: {
+  survey: {
     path: '/style-preferences',
     component: Survey,
     auth: true
