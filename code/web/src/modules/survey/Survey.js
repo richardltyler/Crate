@@ -12,10 +12,170 @@ import { grey, grey2 } from '../../ui/common/colors'
 
 // App Imports
 import Form from './Form'
+import { APP_URL } from '../../setup/config/env'
+
+const data = { "masculine":
+  [
+    {
+      "category": "tops",
+      "photos": [
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "classic"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "edgy"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "sporty"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "preppy"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "trendy"}
+      ]
+    },
+    {
+      "category": "bottoms",
+      "photos": [
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "classic"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "edgy"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "sporty"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "preppy"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "trendy"}
+      ]
+    },
+    {
+      "category": "shoes",
+      "photos": [
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "classic"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "edgy"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "sporty"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "preppy"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "trendy"}
+      ]
+    },
+    {
+      "category": "accessories",
+      "photos": [
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "classic"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "edgy"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "sporty"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "preppy"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "trendy"}
+      ]
+    },
+    {
+      "category": "formal",
+      "photos": [
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "classic"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "edgy"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "sporty"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "preppy"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "trendy"}
+      ]
+    }
+  ],
+
+"feminine":
+  [
+    {
+      "category": "tops",
+      "photos": [
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "classic"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "edgy"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "sporty"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "preppy"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "trendy"}
+      ]
+    },
+    {
+      "category": "bottoms",
+      "photos": [
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "classic"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "edgy"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "sporty"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "preppy"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "trendy"}
+      ]
+    },
+    {
+      "category": "shoes",
+      "photos": [
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "classic"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "edgy"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "sporty"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "preppy"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "trendy"}
+      ]
+    },
+    {
+      "category": "accessories",
+      "photos": [
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "classic"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "edgy"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "sporty"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "preppy"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "trendy"}
+      ]
+    },
+    {
+      "category": "formal",
+      "photos": [
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "classic"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "edgy"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "sporty"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "preppy"},
+        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
+        "style": "trendy"}
+      ]
+    }
+  ]
+}
 
 class Survey extends Component {
   constructor() {
-    super(); 
+    super();
     this.state = {
       selections: {
         tops: [],
@@ -24,8 +184,9 @@ class Survey extends Component {
         shoes: [],
       },
       currentCategoryIndex: 0
-    }; 
+    };
   }
+
   render() {
     return (
       <div>
@@ -43,7 +204,7 @@ class Survey extends Component {
           </GridCell>
         </Grid>
 
-        <Form data={{categoryTitle: 'tops'}}/>
+        <Form data={data.masculine[this.state.currentCategoryIndex]}/>
       </div>
     )
   }
