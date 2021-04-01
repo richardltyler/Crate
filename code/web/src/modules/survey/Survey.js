@@ -9,6 +9,7 @@ import { Helmet } from 'react-helmet'
 import { Grid, GridCell } from '../../ui/grid'
 import { H3 } from '../../ui/typography'
 import { grey, grey2 } from '../../ui/common/colors'
+import Button from '../../ui/button'
 
 // App Imports
 import Form from './Form'
@@ -187,6 +188,10 @@ class Survey extends Component {
     };
   }
 
+  handleNextClick = () => {
+    this.setState({currentCategoryIndex: this.state.currentCategoryIndex + 1});
+  }
+
   render() {
     return (
       <div>
@@ -205,6 +210,9 @@ class Survey extends Component {
         </Grid>
 
         <Form data={data.masculine[this.state.currentCategoryIndex]}/>
+        <Button type="button" theme="secondary" disabled={false} onClick={() => this.handleNextClick()}>
+        Next ➤
+        </Button>
       </div>
     )
   }

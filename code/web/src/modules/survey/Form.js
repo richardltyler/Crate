@@ -15,12 +15,14 @@ import { APP_URL } from '../../setup/config/env'
 
 
 const Form = (props) => {
+  console.log(props);
 
   const [stateSample, setStateSample] = useState({});
 
   const options = props.data.photos.map((photo, i) =>
     <GridCell key={i} justifyCenter={true}>
       <ImageTile width={170} height={250} shadow={level1} image={photo.src}/>
+      //radio button
     </GridCell>
   )
 
@@ -40,9 +42,6 @@ const Form = (props) => {
           </Grid>
         </GridCell>
       </Grid>
-      <Button type="button" theme="secondary" disabled={false}>
-      Next ➤
-      </Button>
     </section>
   )
 }
