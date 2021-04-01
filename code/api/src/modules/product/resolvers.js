@@ -42,8 +42,20 @@ export async function getRelated(parentValue, { productId }) {
   })
 }
 
+// Get product by style
+export async function getByStyle(parentValue, { style }) {
+  const product = await models.Product.findOne({ where: { style: style } })
+
+  if (!product) {
+    // Product does not exists
+    throw new Error('The product you are looking for does not exists or has been discontinued.')
+  } else {
+    return product
+  }
+}
+
 // Create product
-export async function create(parentValue, { name, slug, description, type, gender, image }, { auth }) {
+export async function create(parentValue, { name, slug, description, type, gender, image, style }, { auth }) {
   if(auth.user && auth.user.role === params.user.roles.admin) {
     return await models.Product.create({
       name,
@@ -51,7 +63,8 @@ export async function create(parentValue, { name, slug, description, type, gende
       description,
       type,
       gender,
-      image
+      image, 
+      style
     })
   } else {
     throw new Error('Operation denied.')
@@ -59,7 +72,7 @@ export async function create(parentValue, { name, slug, description, type, gende
 }
 
 // Update product
-export async function update(parentValue, { id, name, slug, description, type, gender, image }, { auth }) {
+export async function update(parentValue, { id, name, slug, description, type, gender, image, style }, { auth }) {
   if(auth.user && auth.user.role === params.user.roles.admin) {
     return await models.Product.update(
       {
@@ -68,7 +81,8 @@ export async function update(parentValue, { id, name, slug, description, type, g
         description,
         type,
         gender,
-        image
+        image,
+        style
       },
       { where: { id } }
     )

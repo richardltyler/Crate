@@ -3,7 +3,7 @@ import { GraphQLInt, GraphQLList } from 'graphql'
 
 // App Imports
 import PreferenceType from './types'
-import { getByID, getByUser, getAll } from './resolvers'
+import { getById, getByUser, getAll } from './resolvers'
 
 // Preferences All
 export const preferences = {
@@ -23,5 +23,5 @@ export const preference = {
   args: {
     id: { type: GraphQLInt }
   },
-  resolve: getByID
+  resolve: getById
 }

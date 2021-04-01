@@ -13,7 +13,8 @@ module.exports = {
         gender: params.user.gender.female.id,
         image: '/images/stock/belt-female.jpg',
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
+        style: "classic"
       },
       {
         name: 'Belt for Men',
@@ -23,7 +24,8 @@ module.exports = {
         gender: params.user.gender.male.id,
         image: '/images/stock/belt-male.jpg',
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
+        style: "classic"
       },
       {
         name: 'Watch for Women',
@@ -33,7 +35,8 @@ module.exports = {
         gender: params.user.gender.female.id,
         image: '/images/stock/watch-female.jpg',
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
+        style: "classic"
       },
       {
         name: 'Watch for Men',
@@ -43,7 +46,8 @@ module.exports = {
         gender: params.user.gender.male.id,
         image: '/images/stock/watch-male.jpg',
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
+        style: "classic"
       },
       {
         name: 'T-Shirt for Women - Black',
@@ -53,7 +57,8 @@ module.exports = {
         gender: params.user.gender.female.id,
         image: '/images/stock/t-shirt-female-1.jpg',
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
+        style: "classic"
       },
       {
         name: 'T-Shirt for Women - Grey',
@@ -63,7 +68,8 @@ module.exports = {
         gender: params.user.gender.female.id,
         image: '/images/stock/t-shirt-female-2.jpg',
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
+        style: "classic"
       },
       {
         name: 'T-Shirt for Men - White',
@@ -73,7 +79,8 @@ module.exports = {
         gender: params.user.gender.male.id,
         image: '/images/stock/t-shirt-male-1.jpg',
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
+        style: "classic"
       },
       {
         name: 'T-Shirt for Men - Grey',
@@ -83,7 +90,8 @@ module.exports = {
         gender: params.user.gender.male.id,
         image: '/images/stock/t-shirt-male-2.jpg',
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
+        style: "classic"
       },
     ])
   },

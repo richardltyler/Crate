@@ -1,5 +1,5 @@
 // Imports
-import { GraphQLInt } from 'graphql'
+import { GraphQLString, GraphQLInt } from 'graphql'
 
 // App Imports
 import PreferenceType from './types'
@@ -28,7 +28,7 @@ export const preferenceUpdate = {
     description: {
       name: 'description',
       type: GraphQLString
-    },
+    }
   },
   resolve: update
 }

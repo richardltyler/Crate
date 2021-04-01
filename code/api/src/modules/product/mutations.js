@@ -37,6 +37,10 @@ export const productCreate = {
     image: {
       name: 'image',
       type: GraphQLString
+    },
+    style: {
+      name: 'style',
+      type: GraphQLString
     }
   },
   resolve: create
@@ -78,6 +82,10 @@ export const productUpdate = {
 
     image: {
       name: 'image',
+      type: GraphQLString
+    },
+    style: {
+      name: 'style',
       type: GraphQLString
     }
   },

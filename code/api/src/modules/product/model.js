@@ -22,7 +22,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.TEXT
     },
     style: {
-      type: DataTypes.String
+      type: DataTypes.STRING
     }
   })
   return Product
