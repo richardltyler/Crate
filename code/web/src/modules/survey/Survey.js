@@ -1,4 +1,5 @@
 // Imports
+import { connect } from 'react-redux'
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 // import { connect } from 'react-redux'
@@ -14,165 +15,8 @@ import Button from '../../ui/button'
 // App Imports
 import Form from './Form'
 import { APP_URL } from '../../setup/config/env'
-
-const data = { "masculine":
-  [
-    {
-      "category": "tops",
-      "photos": [
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "classic"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "edgy"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "sporty"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "preppy"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "trendy"}
-      ]
-    },
-    {
-      "category": "bottoms",
-      "photos": [
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "classic"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "edgy"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "sporty"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "preppy"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "trendy"}
-      ]
-    },
-    {
-      "category": "shoes",
-      "photos": [
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "classic"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "edgy"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "sporty"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "preppy"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "trendy"}
-      ]
-    },
-    {
-      "category": "accessories",
-      "photos": [
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "classic"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "edgy"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "sporty"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "preppy"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "trendy"}
-      ]
-    },
-    {
-      "category": "formal",
-      "photos": [
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "classic"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "edgy"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "sporty"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "preppy"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "trendy"}
-      ]
-    }
-  ],
-
-"feminine":
-  [
-    {
-      "category": "tops",
-      "photos": [
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "classic"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "edgy"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "sporty"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "preppy"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "trendy"}
-      ]
-    },
-    {
-      "category": "bottoms",
-      "photos": [
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "classic"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "edgy"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "sporty"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "preppy"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "trendy"}
-      ]
-    },
-    {
-      "category": "shoes",
-      "photos": [
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "classic"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "edgy"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "sporty"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "preppy"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "trendy"}
-      ]
-    },
-    {
-      "category": "accessories",
-      "photos": [
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "classic"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "edgy"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "sporty"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "preppy"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "trendy"}
-      ]
-    },
-    {
-      "category": "formal",
-      "photos": [
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "classic"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "edgy"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "sporty"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "preppy"},
-        {"src": `${ APP_URL }/images/stock/men/2.jpg`,
-        "style": "trendy"}
-      ]
-    }
-  ]
-}
+import { getList as getProductList } from '../product/api/actions'
+import Loading from '../common/Loading'
 
 class Survey extends Component {
   constructor() {
@@ -188,11 +32,23 @@ class Survey extends Component {
     };
   }
 
-  handleNextClick = () => {
-    this.setState({currentCategoryIndex: this.state.currentCategoryIndex + 1});
-  }
+  // handleNextClick = () => {
+  //   this.setState({currentCategoryIndex: this.state.currentCategoryIndex + 1});
+  // }
+  // Runs on server only for SSR
+  // static fetchData({ store }) {
+  //   return store.dispatch(getProductList())
+  // }
+
+  // Runs on client only
+  // componentDidMount() {
+  //   this.props.getProductList()
+  //   // console.log(state)
+  // }
 
   render() {
+    // const { isLoading, list } = this.props.products
+
     return (
       <div>
         {/* SEO */}
@@ -209,13 +65,27 @@ class Survey extends Component {
           </GridCell>
         </Grid>
 
-        <Form data={data.masculine[this.state.currentCategoryIndex]}/>
-        <Button type="button" theme="secondary" disabled={false} onClick={() => this.handleNextClick()}>
-        Next ➤
-        </Button>
+       { /* <Form data={data.masculine[this.state.currentCategoryIndex]}/>
+         <Button type="button" theme="secondary" disabled={false} onClick={() => this.handleNextClick()}>
+         Next ➤
+        </Button>*/ }
       </div>
     )
   }
 }
 
-export default Survey;
+// Survey.propTypes = {
+//   user: PropTypes.object.isRequired,
+//   products: PropTypes.object.isRequired,
+//   getProductList: PropTypes.func.isRequired
+// }
+
+// function surveyState(state) {
+//   return {
+//     user: state.user,
+//     products: state.products
+//   }
+// }
+
+// export default connect(surveyState, { getProductList })(Survey)
+export default Survey
