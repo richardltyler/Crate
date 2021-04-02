@@ -36,15 +36,15 @@ class Survey extends Component {
   //   this.setState({currentCategoryIndex: this.state.currentCategoryIndex + 1});
   // }
   // Runs on server only for SSR
-  // static fetchData({ store }) {
-  //   return store.dispatch(getProductList())
-  // }
+  static fetchData({ store }) {
+    return store.dispatch(getProductList())
+  }
 
   // Runs on client only
-  // componentDidMount() {
-  //   this.props.getProductList()
-  //   // console.log(state)
-  // }
+  componentDidMount() {
+    this.props.getProductList()
+    // console.log(this.props.getProductList())
+  }
 
   render() {
     // const { isLoading, list } = this.props.products
@@ -80,12 +80,12 @@ class Survey extends Component {
 //   getProductList: PropTypes.func.isRequired
 // }
 
-// function surveyState(state) {
-//   return {
-//     user: state.user,
-//     products: state.products
-//   }
-// }
+function surveyState(state) {
+  return {
+    user: state.user,
+    products: state.products
+  }
+}
 
-// export default connect(surveyState, { getProductList })(Survey)
-export default Survey
+export default connect(surveyState, { getProductList })(Survey)
+// export default Survey
