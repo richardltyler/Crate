@@ -12,7 +12,7 @@ describe('user queries', async () => {
       "/",
       graphqlHTTP({
         schema: schema,
-        graphiql: false
+        graphiql: false,
       })
     )
   });

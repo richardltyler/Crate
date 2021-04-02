@@ -12,6 +12,7 @@ function generateProducts(){
     let type = Math.random() < 0.5 ? 1 : 2;
     let gender = Math.random() < 0.5 ? 1 : 2;
     let image = faker.image.imageUrl();
+    let category = ['tops', 'bottoms', 'shoes', 'accessories', 'formal'][Math.floor(Math.random() * 5)]
     let style = ['classic', 'edgy', 'sporty', 'preppy', 'trendy'][Math.floor(Math.random() * 5)]
 
     products.push({
@@ -23,6 +24,7 @@ function generateProducts(){
       "gender": gender,
       "image": image, 
       "style": style,
+      "category": category,
       "createdAt": new Date(),
       "updatedAt": new Date()
     });
@@ -35,10 +37,10 @@ let productData = generateProducts();
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('products', productData, {})
+    return queryInterface.bulkInsert('surveySamples', productData, {})
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('products', null, {});
+    return queryInterface.bulkDelete('surveySamples', null, {});
   }
 }
