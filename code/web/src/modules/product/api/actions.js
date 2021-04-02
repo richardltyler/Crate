@@ -30,7 +30,7 @@ export function getList(isLoading = true, forceRefresh = false) {
 
     return axios.post(routeApi, query({
       operation: 'products',
-      fields: ['id', 'name', 'slug', 'description', 'image', 'createdAt', 'updatedAt']
+      fields: ['id', 'name', 'slug', 'description', 'image', 'createdAt', 'updatedAt', 'style']
     }))
       .then(response => {
         if (response.status === 200) {
