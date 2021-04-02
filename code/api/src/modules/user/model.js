@@ -20,6 +20,6 @@ module.exports = function(sequelize, DataTypes) {
   User.associate = function(models) {
     User.hasMany(models.Subscription)
   }
-
+  //associate preferences to user
   return User
 }

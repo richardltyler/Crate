@@ -20,6 +20,12 @@ module.exports = function(sequelize, DataTypes) {
     },
     image: {
       type: DataTypes.TEXT
+    },
+    style: {
+      type: DataTypes.STRING
+    },
+    category: {
+      type: DataTypes.STRING
     }
   })
   return Product

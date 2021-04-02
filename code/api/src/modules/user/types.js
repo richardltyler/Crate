@@ -1,6 +1,7 @@
 // Imports
-import { GraphQLObjectType, GraphQLString, GraphQLInt } from 'graphql'
-
+import { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLList } from 'graphql'
+import PreferenceType from '../preference/types.js'
+import { getByUser } from '../preference/resolvers'
 // User type
 const UserType = new GraphQLObjectType({
   name: 'user',
@@ -12,6 +13,9 @@ const UserType = new GraphQLObjectType({
     email: { type: GraphQLString },
     password: { type: GraphQLString },
     role: { type: GraphQLString },
+    preference: { 
+      type: new GraphQLList(PreferenceType),
+      resolve: getByUser},
     createdAt: { type: GraphQLString },
     updatedAt: { type: GraphQLString }
   })

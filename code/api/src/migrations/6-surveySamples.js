@@ -1,6 +1,6 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('products', {
+    return queryInterface.createTable('surveySamples', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -25,6 +25,12 @@ module.exports = {
       image: {
         type: Sequelize.TEXT
       },
+      style: {
+        type: Sequelize.STRING
+      },
+      category: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
@@ -36,6 +42,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('products');
+    return queryInterface.dropTable('surveySamples');
   }
 }
