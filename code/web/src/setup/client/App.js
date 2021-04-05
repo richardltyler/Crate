@@ -8,7 +8,8 @@ import Layout from '../../modules/common/Layout'
 import NotFound from '../../modules/common/NotFound'
 import RoutePrivate from '../../modules/auth/RoutePrivate'
 
-const App = () => (
+const App = () => {
+  return (
   <Layout>
     <Switch>
       {Object.values(routes).map((route, index) => (
@@ -20,6 +21,7 @@ const App = () => (
       <Route component={NotFound}/>
     </Switch>
   </Layout>
-)
+  )
+}
 
 export default App
