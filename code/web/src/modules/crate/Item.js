@@ -41,10 +41,6 @@ class Item extends PureComponent {
           this.props.messageShow(response.data.errors[0].message)
         } else {
           this.props.messageShow('Subscribed successfully.')
-          // { type: MESSAGE_SHOW, 'Subscribed successfully.' }
-
-          // this.props.history.push(userRoutes.subscriptions.path)
-          
         }
       })
       .catch(error => {
